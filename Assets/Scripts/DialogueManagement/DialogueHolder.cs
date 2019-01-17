@@ -3,37 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueHolder : MonoBehaviour {
-
-	public string dialogue;
-	public string[] dialogueLines;
-	private DialogueManager dMan;
-
-	// Use this for initialization
+	[SerializeField] private Dialogue dialogue; //phrases of the character
+	private DialogueManager dMan; //dialogue Manager
 	void Start () 
 	{
-		dMan = FindObjectOfType<DialogueManager>();
+		dMan = FindObjectOfType<DialogueManager>(); //get the dialog Manager in the scene 
 	}
-	
-	// Update is called once per frame
-	void Update ()
+	void OnTriggerStay2D (Collider2D other) //talk to the npc
 	{
-		
-	}
-
-	void OnTriggerStay2D (Collider2D other)
-	{
-		
-		if(other.gameObject.name == "Player")
+		if(other.gameObject.name == "Player")  
 		{
-			if(Input.GetKeyUp(KeyCode.Z))
-			{
-				//dMan.ShowBox(dialogue);
-				if(!dMan.dialogActive)
-				{
-					dMan.dialogLines = dialogueLines;
-					dMan.currentLine = 0;
-					dMan.ShowDialogue();
-				}
+			if(Input.GetKeyDown(KeyCode.Z)) //the input of the player to talk to the character
+			{	
+				dMan.StartDialogue(dialogue); //start the dialogue of the player
 			}
 		}
 	}
