@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerBattle : Fighter
 {
     [SerializeField] private GameObject note;
-    private int beatsShownInAdvance = 3;
+    private int beatsShownInAdvance = 5;
     private bool spellgoing = false;
     private float songPosInBeats;
     private float songPosition;
@@ -15,6 +15,7 @@ public class PlayerBattle : Fighter
     private float secPerBeat;
     private float bpm = 60f;
     private float[] notes;
+    private GameObject Canvas;
 
     public override IEnumerator Attack(Fighter other)
     {
@@ -32,7 +33,7 @@ public class PlayerBattle : Fighter
 
         if (spellid == 0)
         {
-            notes = new float[] { 0.5f, 1f, 2f };
+            notes = new float[] { 5f, 6f, 7f };
             nextIndex = 0;
 
             secPerBeat = 60f / bpm;
@@ -42,8 +43,10 @@ public class PlayerBattle : Fighter
             GetComponent<AudioSource>().Play();
 
             spellgoing = true;
-            while (spellgoing) ;
+            GameObject.Find("/Canvas/Combat UI/Minigame UI").SetActive(true);
+            while (spellgoing) yield return null;
 
+            GameObject.Find("/Canvas/Combat UI/Minigame UI").SetActive(false);
             other.Damaged(this.Spelldamage);
         }
         else if (spellid == 1)
@@ -55,21 +58,28 @@ public class PlayerBattle : Fighter
         yield return null;
     }
 
+    void Start() 
+    {
+        Canvas = GameObject.Find("/Canvas");
+    }
+
     void Update()
     {
         if (spellgoing)
         {
             songPosition = (float)(AudioSettings.dspTime - dsptimesong);
             songPosInBeats = songPosition / secPerBeat;
-
             if (nextIndex < notes.Length && notes[nextIndex] < songPosInBeats + beatsShownInAdvance)
             {
-                Instantiate(note);
+                GameObject TempNote = Instantiate(note);
+                TempNote.transform.SetParent(Canvas.transform, false);
 
-                Note notescript = note.GetComponent<Note>();
+                Note notescript = TempNote.GetComponent<Note>();
                 notescript.BeatsShownInAdvance = beatsShownInAdvance;
                 notescript.SongPosInBeats = songPosInBeats;
-                notescript.BeatOfThisNote = nextIndex;
+                notescript.SecPerBeat = secPerBeat;
+                notescript.Dsptimesong = dsptimesong;
+                notescript.BeatOfThisNote = notes[nextIndex];
 
                 nextIndex++;
             }

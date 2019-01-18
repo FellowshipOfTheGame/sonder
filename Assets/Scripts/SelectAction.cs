@@ -137,6 +137,9 @@ public class SelectAction : MonoBehaviour
             Debug.Log("Lose");
             UnityEditor.EditorApplication.isPlaying = false;
         }
+
+        if (turn >= fighters.Count) turn = Next(turn);
+                
         else
         {
             if (phase == 0)
@@ -211,7 +214,7 @@ public class SelectAction : MonoBehaviour
                     }
                     else
                     {
-                        fighters[i].GetComponent<Image>().color = Color.yellow;
+                        fighters[i].GetComponent<Image>().color = Color.white;
                     }
                 }
             }
@@ -284,7 +287,7 @@ public class SelectAction : MonoBehaviour
                         Image img = enemies[i].gameObject.GetComponent<Image>();
                         if (i != target)
                         {
-                            img.color = Color.yellow;
+                            img.color = Color.white;
                         }
                         else
                         {
@@ -299,7 +302,7 @@ public class SelectAction : MonoBehaviour
                         Image img = team[i].gameObject.GetComponent<Image>();
                         if (i != target)
                         {
-                            img.color = Color.yellow;
+                            img.color = Color.white;
                         }
                         else
                         {
