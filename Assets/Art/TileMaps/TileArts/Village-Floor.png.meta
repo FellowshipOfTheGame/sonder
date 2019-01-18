@@ -25,6 +25,7 @@ TextureImporter:
     21300040: Village-Floor_20
     21300042: Village-Floor_21
     21300044: Village-Floor_22
+    21300046: Village-Floor_23
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -132,7 +133,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea6e80ebd9961404da35dfdf705884ac
+      spriteID: 48681a38b11c324489b17752335724ad
       vertices: []
       indices: 
       edges: []
@@ -152,7 +153,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1429fc521a4ce1a42b5563eb282c3de5
+      spriteID: 0b39e6965fed4d74bbacfc5529db37b9
       vertices: []
       indices: 
       edges: []
@@ -172,7 +173,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f00d6c7c575e436498ee244588404a67
+      spriteID: 31a70695c01f82248b5fd7011eb49daf
       vertices: []
       indices: 
       edges: []
@@ -192,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a507f57a3f1daf44fb2325fb23d6e5ea
+      spriteID: cc421d0ee7cfe7e4698659b391311549
       vertices: []
       indices: 
       edges: []
@@ -212,7 +213,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a9294c1aa8ebc43a71c7663699a9f6
+      spriteID: de815b7312e3a0a44a9c95150ffd4afd
       vertices: []
       indices: 
       edges: []
@@ -232,7 +233,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc04ca5de6e6966459202fb596680bec
+      spriteID: 428e4b3025641994cb03e4a98c055135
       vertices: []
       indices: 
       edges: []
@@ -252,7 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cb2942095d1b26409126740e4dc8c61
+      spriteID: edd386d4e4ef00941a275de5cca7cf52
       vertices: []
       indices: 
       edges: []
@@ -272,7 +273,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7b2edd096b51b747a7b1cb040b692ab
+      spriteID: cdada46cfe6431f4fa9b6d88ebeac8ff
       vertices: []
       indices: 
       edges: []
@@ -292,7 +293,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a2525e46d8505c4dac09bd641acfecd
+      spriteID: 555e3068804009e4491785be04e75901
       vertices: []
       indices: 
       edges: []
@@ -312,7 +313,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07260acb9fc8a1749b3b796d8b83424a
+      spriteID: 56d306a1ba379024bb1b6b067048f437
       vertices: []
       indices: 
       edges: []
@@ -332,7 +333,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 028bfd5b0c8d2dc4b9e0490760ac46d3
+      spriteID: c8c0e847155ef2c498a9551d88104e0d
       vertices: []
       indices: 
       edges: []
@@ -352,7 +353,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 267f71e17d3d98547b86856e5ebecd76
+      spriteID: 97aa897c7775b9742b10824be7361b82
       vertices: []
       indices: 
       edges: []
@@ -372,7 +373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0672fc5e310270240bca026c0252e74d
+      spriteID: 6bd188fab2748f64397824b0cf3f800d
       vertices: []
       indices: 
       edges: []
@@ -392,7 +393,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4da0505f355375479b5e4688902a3a1
+      spriteID: 964ba2002811f6846bad05039c5f19ce
       vertices: []
       indices: 
       edges: []
@@ -412,7 +413,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da78e9764e068fa469244a722078e1de
+      spriteID: 73b91213708e8dd4b9cc83308593225f
       vertices: []
       indices: 
       edges: []
@@ -432,7 +433,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 947723861a5ba0949a961954e25436b1
+      spriteID: a1ff95d44d164a34baeb9ab30c9c1e22
       vertices: []
       indices: 
       edges: []
@@ -452,7 +453,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b430adbf879d0eb429450b7f51c33f36
+      spriteID: ba45d30a402f0884dad11c42d43cc23e
       vertices: []
       indices: 
       edges: []
@@ -472,7 +473,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d55d5bd6e69b5043bf4926da2d4aadc
+      spriteID: b40ee1f89a55fc243a938fb4280129ed
       vertices: []
       indices: 
       edges: []
@@ -492,7 +493,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20d755d6d0c1d345aeab249648634ff
+      spriteID: 217559bf181db244c96571f8542bbf1d
       vertices: []
       indices: 
       edges: []
@@ -512,7 +513,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dc9ee1a5751ec444afed1cc1075941f
+      spriteID: 0196187f799675a4492cc78e8b8a271d
       vertices: []
       indices: 
       edges: []
@@ -532,7 +533,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ddc5fb516d12944c940e605d84bd97a
+      spriteID: 742c3086c342ea1498459330f5943af8
       vertices: []
       indices: 
       edges: []
@@ -552,7 +553,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c84c9d67234ecd43a561887ba805103
+      spriteID: 2f4cda4a65c4b844cac4f82bf4021ccc
       vertices: []
       indices: 
       edges: []
@@ -572,7 +573,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e252be5c18443f84b9b946accb4bed60
+      spriteID: c588ea959d56043439a85ddd241dd3c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Village-Floor_23
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af940eede83f42b4da0d564f7b289beb
       vertices: []
       indices: 
       edges: []
@@ -580,7 +601,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c991ec45f51360c468addb79098ba6b2
+    spriteID: 5871406daf8372e4e9add6a0b97421c8
     vertices: []
     indices: 
     edges: []

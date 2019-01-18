@@ -28,12 +28,14 @@ public class SettingsManager : MonoBehaviour {
 			optionsMenu.SetActive(true);
 			isOpen = true;
 			player.disableMovement = true;
+
 		}
 		else if(Input.GetKeyDown(KeyCode.Escape) && isOpen == true) // fecha o menu 
 		{
 			optionsMenu.SetActive(false);
 			isOpen = false;
 			player.disableMovement = false;
+		
 		}
 	}
 }

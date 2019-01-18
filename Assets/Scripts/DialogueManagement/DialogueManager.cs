@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour {
 			showSentenceCoroutine = StartCoroutine(ShowSentence(actualSentence = sentences.Dequeue())); 
 			firstSentence = false;  
 		}
-		else if(sentenceRunning &&Input.GetKeyDown(KeyCode.Z)) //if the sentence is still running, and is pressed to pass, shown the full sentence
+		else if(sentenceRunning && Input.GetKeyDown(KeyCode.Z)) //if the sentence is still running, and is pressed to pass, shown the full sentence
 		{	
 			StopCoroutine(showSentenceCoroutine);  //stop that show the sentence
 			dText.text = actualSentence; //set the text to the actual sentence
