@@ -8,4 +8,8 @@ public class StandardInteractable : DialogueHolder {
     {
         dMan.StartDialogue(dialogue[0]);
     }
+    protected override void EndDialogue()
+	{
+		
+	}
 }

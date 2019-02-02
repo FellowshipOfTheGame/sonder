@@ -9,6 +9,14 @@ public abstract class DialogueHolder : MonoBehaviour {
 	{
 		dMan = FindObjectOfType<DialogueManager>(); //get the dialog Manager in the scene
 	}
+	void Update()
+	{
+		if(dMan.endDialogueActive)
+		{
+			dMan.endDialogueActive = false;
+			EndDialogue();
+		}
+	}
 	void OnTriggerStay2D (Collider2D other) //talk to the npc
 	{
 		if(other.gameObject.name == "Player")  
@@ -21,4 +29,6 @@ public abstract class DialogueHolder : MonoBehaviour {
 	}
 	
 	protected abstract void TriggerDialogue();
+
+	protected abstract void EndDialogue();
 }

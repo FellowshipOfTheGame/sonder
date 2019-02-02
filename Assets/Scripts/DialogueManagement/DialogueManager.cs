@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour {
 	[SerializeField] private GameObject dBox; //dialog box
 	[SerializeField] private Text dText; //text inside the box 
 	public bool dialogueActive; //true if dialog is active
+	public bool endDialogueActive;//show that the actual dialogue has endend
 	private Queue<string> sentences; //phrases that will be sent in the character box
 	private Player thePlayer; //instance of the player
 	private bool firstSentence; //the first sentence of the dialogue is the one that will be shown?(Brute force solution :c)
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour {
 				dBox.SetActive(false);
 				thePlayer.disableMovement = false;
 				dialogueActive = false;
+				endDialogueActive = true;
 			}
 			else
 			{

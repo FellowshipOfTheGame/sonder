@@ -6,7 +6,19 @@ public class AudioManager : MonoBehaviour {
 
 	[SerializeField]private Sound[] sounds;
 	//private static AudioManager instance;
-
+	private static bool audioManagerExists;
+	void Start()
+	{
+		if(!audioManagerExists) //if audioManager dont exists, dont destroy audioManager on load
+		{
+			audioManagerExists = true;
+			DontDestroyOnLoad(transform.gameObject);
+		}
+		else // else detroy audioManager;
+		{
+			Destroy(gameObject);
+		}
+	}
 	void Awake() { 
 		// creates a AudioSource Component for each sound in the list, copying its atributes
 		foreach(Sound s in sounds)
