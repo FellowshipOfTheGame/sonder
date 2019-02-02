@@ -7,10 +7,13 @@ using UnityEngine.UI;
 public class SelectAction : MonoBehaviour
 {
     [SerializeField] private GameObject[] all_actions;
+    [SerializeField] private GameObject[] spell_actions;
     [SerializeField] private List<PlayerBattle> team;
     [SerializeField] private GameObject enemy;
     private List<Fighter> fighters = new List<Fighter>();
     private List<Enemy> enemies = new List<Enemy>();
+    private GameObject spelloptions;
+    private int spellselected = 0;
     private int action = 0;
     private int target = 0;
     private int phase = 0;
@@ -57,8 +60,10 @@ public class SelectAction : MonoBehaviour
             fighters.Add(player);
         }
 
+        spelloptions = GameObject.Find("/Canvas/Combat UI/Spell Options");
         GameObject Canvas = GameObject.Find("/Canvas");
         GameObject TempEnemy;
+
         if (r == 0)
         {
             TempEnemy = Instantiate(enemy);
@@ -180,15 +185,13 @@ public class SelectAction : MonoBehaviour
                             }
                             else if (action == 1)
                             {
-                                target = 0;
-                                who = fighters[turn].Spelltarget;
-                                phase = 1;
+                                spelloptions.SetActive(true);
+                                phase = 2;
                             }
                             else if (action == 2)
                             {
                                 UnityEditor.EditorApplication.isPlaying = false;
                             }
-
                         }
                     }
                 }
@@ -312,6 +315,58 @@ public class SelectAction : MonoBehaviour
 
                 }
 
+            }
+            else if (phase == 2)
+            {
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    if (spellselected < spell_actions.Length - 1)
+                    {
+                        spellselected++;
+                    }
+                }
+                else if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    if (spellselected > 0)
+                    {
+                        spellselected--;
+                    }
+                }
+                else if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    if (spellselected == 0)
+                    {
+                        target = 0;
+                        who = 1;
+                        phase = 1;
+                    }
+                    else if (spellselected == 1)
+                    {
+                        target = 0;
+                        who = 1;
+                        phase = 1;
+                    }
+                    else if (spellselected == 2)
+                    {
+                        target = 0;
+                        who = 0;
+                        phase = 1;
+                    }
+                    spelloptions.SetActive(false);
+                }
+
+                for (int i = 0; i < spell_actions.Length; i++)
+                {
+                    Image img = spell_actions[i].GetComponent<Image>();
+                    if (i != action)
+                    {
+                        img.color = Color.white;
+                    }
+                    else
+                    {
+                        img.color = Color.gray;
+                    }
+                }
             }
         }
     }
