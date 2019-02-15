@@ -15,7 +15,7 @@ public class Enemy : Fighter
         yield return null;
     }
 
-    public override IEnumerator Spell(Fighter other)
+    public override IEnumerator Spell(Fighter other, int spellselected)
     {
         throw new System.NotImplementedException();
     }

@@ -434,9 +434,9 @@ MonoBehaviour:
   - {fileID: 2001071649}
   - {fileID: 1782486966}
   spell_actions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 567329055}
+  - {fileID: 1033027510}
+  - {fileID: 1215529228}
   team:
   - {fileID: 744867341}
   - {fileID: 1929543796}
@@ -837,10 +837,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spelldamage: 50
+  spellheal: 50
+  spellprotect: 50
   damage: 25
-  hp: 50
-  spelltarget: 0
-  spellid: 0
+  hp: 100
   note: {fileID: 1308160828334342, guid: 3f645756888c14d8f99d15305d608f95, type: 3}
 --- !u!114 &744867342
 MonoBehaviour:
@@ -2006,6 +2006,7 @@ GameObject:
   - component: {fileID: 1929543797}
   - component: {fileID: 1929543796}
   - component: {fileID: 1929543799}
+  - component: {fileID: 1929543800}
   m_Layer: 5
   m_Name: Hero 2
   m_TagString: Untagged
@@ -2044,11 +2045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806464a73bc524bd08c56b8e109a34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spelldamage: 400
+  spelldamage: 50
+  spellheal: 50
+  spellprotect: 50
   damage: 25
-  hp: 50
-  spelltarget: 1
-  spellid: 1
+  hp: 100
   note: {fileID: 1308160828334342, guid: 3f645756888c14d8f99d15305d608f95, type: 3}
 --- !u!114 &1929543797
 MonoBehaviour:
@@ -2184,6 +2185,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1929543800
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929543794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306ca03c82f26154c9d8a8bd35394816, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2001071649
 GameObject:
   m_ObjectHideFlags: 0

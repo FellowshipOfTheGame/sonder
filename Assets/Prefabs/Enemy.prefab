@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 222495617362387842}
   - component: {fileID: 114532394823447208}
   - component: {fileID: 114791109396832918}
+  - component: {fileID: 8936658475590347490}
   m_Layer: 5
   m_Name: Enemy
   m_TagString: Untagged
@@ -91,4 +92,22 @@ MonoBehaviour:
   damage: 25
   hp: 50
   spelltarget: 0
-  spellid: 0
+--- !u!95 &8936658475590347490
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844900167588024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe6e088d19262c64491b3989ea487f7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

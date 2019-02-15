@@ -27,11 +27,19 @@ public class PlayerBattle : Fighter
         yield return null;
     }
 
-    public override IEnumerator Spell(Fighter other)
+    public override IEnumerator Spell(Fighter other, int spellselected)
     {
         this.Done = false;
 
-        if (spellid == 0)
+        if (spellselected == 0)
+        {
+            other.Healed(this.Spellheal);
+        }
+        else if (spellselected == 1)
+        {
+            // Have no idea what this does
+        }
+        else if (spellselected == 2)
         {
             notes = new float[] { 5f, 6f, 7f };
             nextIndex = 0;
@@ -48,10 +56,6 @@ public class PlayerBattle : Fighter
 
             GameObject.Find("/Canvas/Combat UI/Minigame UI").SetActive(false);
             other.Damaged(this.Spelldamage);
-        }
-        else if (spellid == 1)
-        {
-            other.Healed(this.Spelldamage);
         }
 
         this.Done = true;

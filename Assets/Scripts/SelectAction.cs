@@ -209,6 +209,19 @@ public class SelectAction : MonoBehaviour
                     }
                 }
 
+                for (int i = 0; i < spell_actions.Length; i++)
+                {
+                    Image img = spell_actions[i].GetComponent<Image>();
+                    if (i != spellselected)
+                    {
+                        img.color = Color.white;
+                    }
+                    else
+                    {
+                        img.color = Color.gray;
+                    }
+                }
+
                 for (int i = 0; i < fighters.Count; i++)
                 {
                     if (i == turn && fighters[turn] is PlayerBattle)
@@ -264,7 +277,7 @@ public class SelectAction : MonoBehaviour
                         }
                         else if (action == 1)
                         {
-                            StartCoroutine(fighters[turn].Spell(enemies[target]));
+                            StartCoroutine(fighters[turn].Spell(enemies[target], spellselected));
                         }
                     }
                     else
@@ -275,7 +288,7 @@ public class SelectAction : MonoBehaviour
                         }
                         else if (action == 1)
                         {
-                            StartCoroutine(fighters[turn].Spell(team[target]));
+                            StartCoroutine(fighters[turn].Spell(team[target], spellselected));
                         }
                     }
 
@@ -358,7 +371,7 @@ public class SelectAction : MonoBehaviour
                 for (int i = 0; i < spell_actions.Length; i++)
                 {
                     Image img = spell_actions[i].GetComponent<Image>();
-                    if (i != action)
+                    if (i != spellselected)
                     {
                         img.color = Color.white;
                     }

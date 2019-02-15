@@ -5,14 +5,14 @@ using UnityEngine;
 public abstract class Fighter : MonoBehaviour
 {
     [SerializeField] private float spelldamage = 25f;
+    [SerializeField] private float spellheal = 25f;
+    [SerializeField] private float spellprotect = 25f;
     [SerializeField] private float damage = 25f;
     [SerializeField] private float hp = 50f;
-    [SerializeField] private int spelltarget;
-    [SerializeField] protected int spellid;
     private bool done = true;
 
     public abstract IEnumerator Attack(Fighter other);
-    public abstract IEnumerator Spell(Fighter other);
+    public abstract IEnumerator Spell(Fighter other, int spellselected);
 
     public bool Done
     {
@@ -32,10 +32,16 @@ public abstract class Fighter : MonoBehaviour
         protected set { spelldamage = value; }
     }
 
-    public int Spelltarget
+    public float Spellheal
     {
-        get { return spelltarget; }
-        private set { spelltarget = value; }
+        get { return spellheal; }
+        protected set { spellheal = value; }
+    }
+
+    public float Spellprotect
+    {
+        get { return spellprotect; }
+        protected set { spellprotect = value; }
     }
 
     public float Hp
