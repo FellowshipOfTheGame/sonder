@@ -44,6 +44,15 @@ TagManager:
   - name: Ground
     uniqueID: 1624528335
     locked: 0
+  - name: House
+    uniqueID: 2547397211
+    locked: 0
   - name: Player
     uniqueID: 2948979407
+    locked: 0
+  - name: Fances
+    uniqueID: 2953909013
+    locked: 0
+  - name: Trees
+    uniqueID: 4197298343
     locked: 0
