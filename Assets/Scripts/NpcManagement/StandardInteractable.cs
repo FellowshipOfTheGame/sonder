@@ -6,7 +6,7 @@ public class StandardInteractable : DialogueHolder {
 
     protected override void TriggerDialogue()
     {
-        dMan.StartDialogue(dialogue[0]);
+        dMan.StartDialogue(dialogueArray.dialogue[0],"");
     }
     protected override void EndDialogue()
 	{

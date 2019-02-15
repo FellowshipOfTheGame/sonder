@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour {
 
 	[SerializeField] private GameObject dBox; //dialog box
-	[SerializeField] private Text dText; //text inside the box 
+	[SerializeField] private Text dialogueText; //text inside the box 
+
+	[SerializeField] private Text nameText;
 	public bool dialogueActive; //true if dialog is active
 	public bool endDialogueActive;//show that the actual dialogue has endend
 	private Queue<string> sentences; //phrases that will be sent in the character box
@@ -32,7 +34,7 @@ public class DialogueManager : MonoBehaviour {
 		else if(sentenceRunning && Input.GetKeyDown(KeyCode.Z)) //if the sentence is still running, and is pressed to pass, shown the full sentence
 		{	
 			StopCoroutine(showSentenceCoroutine);  //stop that show the sentence
-			dText.text = actualSentence; //set the text to the actual sentence
+			dialogueText.text = actualSentence; //set the text to the actual sentence
 			sentenceRunning = false;
 		}
 		else if(dialogueActive && Input.GetKeyDown(KeyCode.Z) )
@@ -40,7 +42,7 @@ public class DialogueManager : MonoBehaviour {
 			if(sentences.Count == 0) //if the npc dialogue has endend;
 			{
 				dBox.SetActive(false);
-				thePlayer.disableMovement = false;
+				Player.disableMovement = false;
 				dialogueActive = false;
 				endDialogueActive = true;
 			}
@@ -55,22 +57,23 @@ public class DialogueManager : MonoBehaviour {
 	IEnumerator ShowSentence(string sentence) //show the sentence in the dialogue box letter by letter
 	{	
 		sentenceRunning = true;
-		dText.text = "";
+		dialogueText.text = "";
 		foreach (char letter in sentence)
 		{
-			dText.text += letter;
+			dialogueText.text += letter;
 			yield return null; // a latter by frame	
 		}
 		sentenceRunning = false; 	
 	}
 
-	public void StartDialogue(Dialogue dialogue)
+	public void StartDialogue(Dialogue dialogue, string npcName)
 	{
 		if(!dialogueActive) //if the dialogue is not active, activate it;
 		{	
 			foreach (string sentence in dialogue.sentences) //set the sentences queue
 				sentences.Enqueue(sentence);
-			thePlayer.disableMovement = true; //the player cant move during dialogue;			
+			nameText.text = npcName;
+			Player.disableMovement = true; //the player cant move during dialogue;			
 			dBox.SetActive(true); //set active the dialogue box
 			dialogueActive = true; //start the dialogues
 			firstSentence = true;

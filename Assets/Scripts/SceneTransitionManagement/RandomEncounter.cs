@@ -13,7 +13,7 @@ public class RandomEncounter : MonoBehaviour {
 	{
 		thePlayer = FindObjectOfType<Player>();
 		thePlayer.GetComponent<SpriteRenderer>().enabled = true;
-		thePlayer.disableMovement = false;
+		Player.disableMovement = false;
 	}
 	
 	void OnTriggerStay2D(Collider2D other)
@@ -24,14 +24,14 @@ public class RandomEncounter : MonoBehaviour {
 
 	private IEnumerator loadBattle(Collider2D other)
 	{	
-		if(other.gameObject.name == "Player" && thePlayer.playerMoving)
+		if(other.gameObject.name == "Player" && Player.playerMoving)
 		{		
 				couritineRunning = true;
 				int random = Random.Range(0, 10); //generate random number
 				Debug.Log(random);
 				if(random >= 5) //50% chance of encounter
 				{	
-					thePlayer.disableMovement = true; //disable the player while in combat
+					Player.disableMovement = true; //disable the player while in combat
 					transitionAnim.SetTrigger("end");
 					FindObjectOfType<AudioManager>().Play("door");
 					yield return new WaitForSeconds(1.5f);

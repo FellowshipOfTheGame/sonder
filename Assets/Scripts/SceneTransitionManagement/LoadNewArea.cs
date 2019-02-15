@@ -14,7 +14,7 @@ public class LoadNewArea : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		thePlayer = FindObjectOfType<Player>(); //gets the player;
+		//thePlayer = FindObjectOfType<Player>(); //gets the player;
 	}
 	
 	// Update is called once per frame
@@ -32,15 +32,15 @@ public class LoadNewArea : MonoBehaviour {
 
 	private IEnumerator LoadScene()
 	{
-		thePlayer.disableMovement = true;
+		Player.disableMovement = true;
 		transitionAnim.SetTrigger("end");
 		FindObjectOfType<AudioManager>().Play("door");
 		yield return new WaitForSeconds(2.5f);
 		SceneManager.LoadScene(levelToLoad); //load the new scene
 		thePlayer = FindObjectOfType<Player>();
-		thePlayer.disableMovement = true;
+		Player.disableMovement = true;
 		thePlayer.transform.position = startPoint; //set its position to the start point of the new scene
-		thePlayer.lastMove = startDirection; // set the direction the player faces
-		thePlayer.disableMovement = false;
+		Player.lastMove = startDirection; // set the direction the player faces
+		Player.disableMovement = false;
 	}
 }

@@ -10,9 +10,13 @@ public class JsonDem : MonoBehaviour {
 	void Start()
 	{
 		path = Application.streamingAssetsPath + "/alce.json";
+		Debug.Log(path);
 		jsonString = File.ReadAllText(path);
-		Dialogue dialogue = JsonUtility.FromJson<Dialogue>(jsonString);
-		foreach( string sentences in dialogue.sentences)
-			Debug.Log(sentences);
+		DialogueArray dialog = JsonUtility.FromJson<DialogueArray>(jsonString);
+		foreach( Dialogue d in dialog.dialogue)
+		{
+			foreach( string sentence in d.sentences)
+			Debug.Log(sentence);
+		}
 	}																																							
 }

@@ -14,7 +14,7 @@ public class SettingsManager : MonoBehaviour {
 		if(!uiExists) //if player dont exists, dont destroy player on load
 		{
 			uiExists = true;
-			DontDestroyOnLoad(transform.gameObject);
+			DontDestroyOnLoad(gameObject);
 		}
 		else // else detroy player;
 		{
@@ -27,14 +27,14 @@ public class SettingsManager : MonoBehaviour {
 		{
 			optionsMenu.SetActive(true);
 			isOpen = true;
-			player.disableMovement = true;
+			Player.disableMovement = true;
 
 		}
 		else if(Input.GetKeyDown(KeyCode.Escape) && isOpen == true) // fecha o menu 
 		{
 			optionsMenu.SetActive(false);
 			isOpen = false;
-			player.disableMovement = false;
+			Player.disableMovement = false;
 		
 		}
 	}

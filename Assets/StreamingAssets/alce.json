@@ -1,9 +1,19 @@
-
 {
-    "sentences":[
-                "oi eu sou o alce",
-                "eu gosto de brincar",
-                "voce pode apertar z na regiao em cima de mim?"
-                ]
+    "dialogue":
+    [
+        {
+        "sentences":
+            [
+                "teste1",
+                "teste2"
+            ]
+        },
+        {
+            "sentences":
+            [
+                "teste3",
+                "teste4"
+            ]
+        }
+    ] 
 }
-      

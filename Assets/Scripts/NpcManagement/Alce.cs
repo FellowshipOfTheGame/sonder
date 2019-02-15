@@ -14,9 +14,9 @@ public class Alce : DialogueHolder {
 	protected override void TriggerDialogue()
 	{
 		if(teste)
-			dMan.StartDialogue(dialogue[1]);
+			dMan.StartDialogue(dialogueArray.dialogue[1], gameObject.name);
 		else
-		 	dMan.StartDialogue(dialogue[0]);
+		 	dMan.StartDialogue(dialogueArray.dialogue[0], gameObject.name);
 	}
 
 	protected override void EndDialogue()

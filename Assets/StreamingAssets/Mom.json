@@ -1,0 +1,19 @@
+{
+    "dialogue":
+    [
+        {
+        "sentences":
+            [
+                "teste1",
+                "teste2"
+            ]
+        },
+        {
+            "sentences":
+            [
+                "teste3",
+                "teste4"
+            ]
+        }
+    ] 
+}
